@@ -1,3 +1,21 @@
+import logging
+
+from auth.check_permission import check_perm
+from config.router_config import RouterTag
+from fastapi import APIRouter, Depends, Query
+from models.admin import Admin
+from models.response import ResponseModel
+from common import (
+    db_construct_detail_filter_condition,
+    db_get_csv_data,
+    insert_picture_to_excel3,
+)
+from fastapi.responses import StreamingResponse
+
+router = APIRouter()
+logger = logging.getLogger("web")
+router_name = RouterTag.HISTORY.value  # 路由名称
+
 @router.get("/download", name=f"download history data - {1 << 2}")
 async def download(
     start_time: int = Query(..., ge=0, le=7990329600000, description="开始时间"),
