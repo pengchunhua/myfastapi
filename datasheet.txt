@@ -22,4 +22,6 @@ python signal的使用方式：https://zhuanlan.zhihu.com/p/91678827
 python的信号处理库（事件通知库）：
   1、https://zhuanlan.zhihu.com/p/435076618
   2、https://github.com/pallets-eco/blinker/tree/main/src/blinker
-linux内核阻塞和异步机制原理：https://zhuanlan.zhihu.com/p/461439093
+linux内核阻塞和异步机制原理：
+  1、https://zhuanlan.zhihu.com/p/461439093
+  2、https://blog.csdn.net/m0_46535940/article/details/124664708
