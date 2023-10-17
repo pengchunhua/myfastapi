@@ -1,0 +1,25 @@
+python实现定时器：https://blog.csdn.net/qq_38412868/article/details/100711702
+python描述器：https://zhuanlan.zhihu.com/p/52708890
+python元类和元类编程：https://zhuanlan.zhihu.com/p/114242597
+property实现原理及实现：https://zhuanlan.zhihu.com/p/142029367
+netty能做什么：https://www.zhihu.com/question/24322387
+Java NIO wakeup实现原理：https://www.cnblogs.com/yungyu16/p/13065194.html
+python实现异步的底层原理是什么：https://www.zhihu.com/question/432814091
+python实现简单事件循环：https://zhuanlan.zhihu.com/p/71511434
+python调用k8s API:https://www.cnblogs.com/linu/p/11703438.html
+python通过k8s API实现集群认证：https://blog.csdn.net/anqixiang/article/details/114434578
+python zookeeper实现服务注册与发现：https://blog.csdn.net/weixin_43866211/article/details/103028284
+zookeeper实现分布式锁：
+  1、https://www.cnblogs.com/zhaobin022/p/8065317.html
+  2、https://zhuanlan.zhihu.com/p/363323742
+  3、https://www.cnblogs.com/zhaobin022/p/8065317.html
+mysql锁机制问题：https://zhuanlan.zhihu.com/p/48269420
+python signal.set_wakeup_fd的作用和实现：http://timd.cn/python/signal/
+tornado使用signal.set_wakeup_fd的代码：
+  1、https://github.com/tao12345666333/tornado-zh/blob/master/tornado/platform/common.py#L10
+  2、https://github.com/tao12345666333/tornado-zh/blob/master/tornado/ioloop.py
+python signal的使用方式：https://zhuanlan.zhihu.com/p/91678827
+python的信号处理库（事件通知库）：
+  1、https://zhuanlan.zhihu.com/p/435076618
+  2、https://github.com/pallets-eco/blinker/tree/main/src/blinker
+linux内核阻塞和异步机制原理：https://zhuanlan.zhihu.com/p/461439093
