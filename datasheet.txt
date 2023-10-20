@@ -26,6 +26,37 @@ linux内核阻塞和异步机制原理：
   1、https://zhuanlan.zhihu.com/p/461439093
   2、https://blog.csdn.net/m0_46535940/article/details/124664708
 
+redis键空间通知：
+  1、https://zhuanlan.zhihu.com/p/103963089
+  2、https://www.cnblogs.com/fu-yong/p/9628965.html
+
+kafka架构和源码：
+  1、从源码到架构全部讲透：https://zhuanlan.zhihu.com/p/388355017
+  2、kafka设计架构详解：https://blog.csdn.net/qq_32828253/article/details/110732652
+  3、kafka架构及网络设计原理：https://zhuanlan.zhihu.com/p/95502201
+  4、kafka数据持久化机制：https://www.jianshu.com/p/1bdc181a7ebd
+  5、kafka的ACK机制：https://juejin.cn/post/7166529283291086879
+  6、kafka消费者轮询的准备工作：https://blog.csdn.net/baidu_40468340/article/details/128492534
+
+Linux性能调优：
+  1、https://zhuanlan.zhihu.com/p/470749806
+
+python监听鼠标和键盘事件：
+  1、keybord插件监听键盘事件：https://blog.csdn.net/coco56/article/details/107847467
+  2、pynput监听鼠标和键盘事件：https://blog.csdn.net/u011367482/article/details/106173994
+
+事件驱动：
+  1、详解事件驱动event实现：https://blog.csdn.net/brucewong0516/article/details/84031715
+
+SSE服务：
+  1、python中实现websocket和SSE实现HTTP:https://blog.csdn.net/weixin_44777680/article/details/114692497
+
+threading中Local类的使用：
+  1、threading中Local类的使用：https://blog.csdn.net/brucewong0516/article/details/84589806?spm=1001.2014.3001.5502
+
+asyncio事件循环：
+  1、多线程中启用多个事件循环：https://www.jianshu.com/p/29ffdbd65679
+  2、从0到精通事件循环：https://juejin.cn/post/7240427838343577655
 
 asyncio时间循环的执行过程：
 1、通过asyncio创建并初始化loop
@@ -49,7 +80,6 @@ def __await__(self):
     if not self.done():
         raise RuntimeError("await wasn't used with future")
     return self.result()  # May raise too.
-另外需要说明的是，一个类实现了__await__函数即可使用await关键字来等待。
+另外需要说明的是，一个类实现了__await__函数即可使用await关键字来等待，另外set_result主要还是为了唤醒selector事件循环，让事件能正常结束。
 
-
-事件循环导致cpu飙高的问题，是由于python中的时间循环会一直是contextvar中的上下文变量来判断是否需要运行对应的事件
+所谓的transport就是将一些对象封装成socket对象，然后使用sokcet对数据传输。
