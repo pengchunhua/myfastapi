@@ -25,3 +25,25 @@ python的信号处理库（事件通知库）：
 linux内核阻塞和异步机制原理：
   1、https://zhuanlan.zhihu.com/p/461439093
   2、https://blog.csdn.net/m0_46535940/article/details/124664708
+
+
+asyncio时间循环的执行过程：
+1、通过asyncio创建并初始化loop
+2、loop初始化过程：
+  1、使用asyncio/selector_events.py文件中BaseSelectorEventloop,调用其中的_make_self_pipe函数，然后调用socket.socketpair()创建出两个已连接的socket对象
+  参考文件：https://www.cnblogs.com/lijinlei521/p/12707815.html
+  2、BaseSelectorEventLoop继承自asyncio/base_events.py中的BaseEvent类。
+  2、然后调用_add_reader函数
+  3、然后将对应的socket注册到epoll事件循环中监听事件，注意这里还将callback函数封装成了asyncio/events.py中的Handle对象
+  4、最后调用生成上下文context = contextvars.copy_context()之后使用context.run()调度对应的函数。
+  5、使用BaseEventLoop中的call_soon/call_later/call_at等函数将对应的事件添加到调度循环中，并将事件封装为asyncio/events.py中TimerHandle对象。
+
+Future对象中set_result函数，本质是调用loop中的call_soon方法将结果写入到上文提到到的context上下文中，对于await future这中写法可以参考future源码中的 __await__：
+def __await__(self):
+    if not self.done():
+        self._asyncio_future_blocking = True
+        yield self  # This tells Task to wait for completion.
+    if not self.done():
+        raise RuntimeError("await wasn't used with future")
+    return self.result()  # May raise too.
+另外需要说明的是，一个类实现了__await__函数即可使用await关键字来等待。
