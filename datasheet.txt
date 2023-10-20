@@ -30,6 +30,9 @@ linux内核阻塞和异步机制原理：
 asyncio时间循环的执行过程：
 1、通过asyncio创建并初始化loop
 2、loop初始化过程：
+  一、事件的调度过程：
+    1、调用asyncio/selector_events.py文件中BaseSelectorEventloop，使用run_until_complete() -> run_forever() -> _run_once() ->self._ready队列中的所有事件
+  二、事件的生成过程
   1、使用asyncio/selector_events.py文件中BaseSelectorEventloop,调用其中的_make_self_pipe函数，然后调用socket.socketpair()创建出两个已连接的socket对象
   参考文件：https://www.cnblogs.com/lijinlei521/p/12707815.html
   2、BaseSelectorEventLoop继承自asyncio/base_events.py中的BaseEvent类。
