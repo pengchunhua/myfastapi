@@ -50,3 +50,6 @@ def __await__(self):
         raise RuntimeError("await wasn't used with future")
     return self.result()  # May raise too.
 另外需要说明的是，一个类实现了__await__函数即可使用await关键字来等待。
+
+
+事件循环导致cpu飙高的问题，是由于python中的时间循环会一直是contextvar中的上下文变量来判断是否需要运行对应的事件
