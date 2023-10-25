@@ -1,6 +1,7 @@
 import threading
 from contextlib import contextmanager
 
+# 参考文档：https://python3-cookbook.readthedocs.io/zh-cn/latest/c12/p05_locking_with_deadlock_avoidance.html
 # Thread-local state to stored information on locks already acquired
 _local = threading.local()
 
