@@ -83,3 +83,8 @@ def __await__(self):
 另外需要说明的是，一个类实现了__await__函数即可使用await关键字来等待，另外set_result主要还是为了唤醒selector事件循环，让事件能正常结束。
 
 所谓的transport就是将一些对象封装成socket对象，然后使用sokcet对数据传输。
+
+目前为止，阻塞cpu的方式主要有3中方式：
+1、使用线程锁, 如evt = threading.Event(); evt.set()或者cond = threading.Condition(); cond.wait(timeout=timeout)
+2、使用协程的Future对象，如future = loop.create_future(); await future
+3、使用IO多路复用中的select,如select.select([sock], [], [], timeout=timout), 其中的sock可以使用sock.send(b"\0x00")唤醒，或者在一定时间内未发生事件则继续往下执行。
