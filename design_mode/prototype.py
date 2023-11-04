@@ -1,9 +1,9 @@
 from copy import copy, deepcopy
 
 class Prototype(object):
-    """
-    　　　设计一个图层对象，用background表示背景的RGBA，简单用content表示内容，除了直接绘画，还可以设置透明度。
-　　"""
+  """
+    设计一个图层对象，用background表示背景的RGBA，简单用content表示内容，除了直接绘画，还可以设置透明度。
+　"""
   def __init__(self):
     self.background=[0,0,0,0]
     self.content="blank"
