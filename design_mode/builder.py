@@ -1,3 +1,6 @@
+# 建造者模式与策略模式的区别是，建造者提供能实现的功能，direcotr指挥实施
+# 策略模式则是完成所有的功能，对调用提供完整的功能
+
 class HotelBuilder:
     @classmethod
     def get_material(cls):
