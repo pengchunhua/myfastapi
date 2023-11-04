@@ -1,3 +1,7 @@
+def _release_waiter(waiter, *args):
+    if not waiter.done():
+        waiter.set_result(None)
+        
 async def _wait(fs, timeout, return_when, loop):
     """Internal helper for wait().
 
@@ -7,9 +11,11 @@ async def _wait(fs, timeout, return_when, loop):
     waiter = loop.create_future()
     timeout_handle = None
     if timeout is not None:
+        # 设置超时处理函数
         timeout_handle = loop.call_later(timeout, _release_waiter, waiter)
     counter = len(fs)
 
+    # 函数在时间端内完成，则清理timeout_handle并让函数执行完成
     def _on_completion(f):
         nonlocal counter
         counter -= 1
