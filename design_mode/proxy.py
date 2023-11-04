@@ -1,3 +1,5 @@
+# 通过代理的方式可以增加一些权限校验
+
 class Proxy(object):
     def __init__(self, obj):
         self._obj = obj
@@ -36,6 +38,7 @@ if __name__ == "__main__":
     p.bar(8)
     p.x = 58
 
+# 直接代理的方式，远程代理的话可以通过RPC来实现
 class Subject:
     def request(self):
         pass
