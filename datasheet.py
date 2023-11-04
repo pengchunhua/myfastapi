@@ -1,3 +1,4 @@
+"""
 python实现定时器：https://blog.csdn.net/qq_38412868/article/details/100711702
 python描述器：https://zhuanlan.zhihu.com/p/52708890
 python元类和元类编程：https://zhuanlan.zhihu.com/p/114242597
@@ -88,3 +89,4 @@ def __await__(self):
 1、使用线程锁, 如evt = threading.Event(); evt.set()或者cond = threading.Condition(); cond.wait(timeout=timeout)
 2、使用协程的Future对象，如future = loop.create_future(); await future
 3、使用IO多路复用中的select,如select.select([sock], [], [], timeout=timout), 其中的sock可以使用sock.send(b"\0x00")唤醒，或者在一定时间内未发生事件则继续往下执行。
+"""
