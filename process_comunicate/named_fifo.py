@@ -4,6 +4,47 @@
 fifo要求读写双方必须同时打开才可以继续进行读写操作，否则打开操作会堵塞直到对方也打开。
 """
 
+# ---------------------------------------读端--------------------------------------------
+#encoding:utf-8
+import os, time, random
+ 
+p_Name = "./pipe1"
+ 
+if (os.access(p_Name, os.F_OK) == False) :
+    os.mkfifo(p_Name)
+ 
+print "before open"
+fp_r = os.open(p_Name, os.O_RDONLY)
+print "open end"
+while True:
+    msg = os.read(fp_r, 100)
+    if msg == "":
+        break
+    print msg
+    if msg == "q":
+        print "quit"
+        break
+os.close(fp_r)
+
+# ---------------------------------写端------------------------------------------------
+#encoding:utf-8
+import os
+ 
+p_Name = "./pipe1"
+ 
+if os.access(p_Name, os.F_OK) == False:
+    os.mkfifo(p_Name)
+fd_w = os.open(p_Name, os.O_WRONLY)
+ 
+while True:
+    msg = raw_input("w---->>")
+    os.write(fd_w, msg)
+    if msg == "q":
+        break
+os.close(fd_w)
+
+
+# 参考程序
 import os
 import sys
 import math
