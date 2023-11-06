@@ -1,41 +1,34 @@
 """
 只有父进程与子进程之前可以用管道传递数据。通过os.read()和os.write()来对文件描述符进行读写操作，使用os.close()关闭描述符。
 """
-import os
-import sys
-import math
+# coding=utf-8
+from multiprocessing import Pipe, Process
 
 
-def slice(mink, maxk):
-    s = 0.0
-    for k in range(mink, maxk):
-        s += 1.0/(2*k+1)/(2*k+1)
-    return s
+def son_process(x, pipe):
+    _out_pipe, _in_pipe = pipe
+
+    # 关闭fork过来的输入端
+    _in_pipe.close()
+    while True:
+        try:
+            msg = _out_pipe.recv()
+            print msg
+        except EOFError:
+            # 当out_pipe接受不到输出的时候且输入被关闭的时候，会抛出EORFError，可以捕获并且退出子进程
+            break
 
 
-def pi(n):
-    childs = {}
-    unit = n / 10
-    for i in range(10):  # 分10个子进程
-        mink = unit * i
-        maxk = mink + unit
-        r, w = os.pipe()
-        pid = os.fork()
-        if pid > 0:
-            childs[pid] = r  # 将子进程的pid和读描述符存起来
-            os.close(w)  # 父进程关闭写描述符，只读
-        else:
-            os.close(r)  # 子进程关闭读描述符，只写
-            s = slice(mink, maxk)  # 子进程开始计算
-            os.write(w, str(s))
-            os.close(w)  # 写完了，关闭写描述符
-            sys.exit(0)  # 子进程结束
-    sums = []
-    for pid, r in childs.items():
-        sums.append(float(os.read(r, 1024)))
-        os.close(r)  # 读完了，关闭读描述符
-        os.waitpid(pid, 0)  # 等待子进程结束
-    return math.sqrt(sum(sums) * 8)
+if __name__ == '__main__':
+    out_pipe, in_pipe = Pipe(True)
+    son_p = Process(target=son_process, args=(100, (out_pipe, in_pipe)))
+    son_p.start()
 
-
-print(pi(10000000))
+    # 等 pipe 被 fork 后，关闭主进程的输出端
+    # 这样，创建的Pipe一端连接着主进程的输入，一端连接着子进程的输出口
+    out_pipe.close()
+    for x in range(1000):
+        in_pipe.send(x)
+    in_pipe.close()
+    son_p.join()
+    print "主进程也结束了"
