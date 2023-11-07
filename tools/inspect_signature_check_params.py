@@ -26,3 +26,12 @@ def typeassert(*ty_args, **ty_kwargs):
             return func(*args, **kwargs)
         return wrapper
     return decorate
+
+
+@typeassert(int, z=int)
+def spam(x, y, z=42):
+     print(x, y, z)
+
+spam(1, 2, 3)
+spam(1, 'hello', 3)
+spam(1, 'hello', 'world')
