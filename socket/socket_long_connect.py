@@ -30,8 +30,8 @@ from datetime import datetime
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-conn.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, True)
-conn.ioctl(socket.SIO_KEEPALIVE_VALS, 
+sock.setsockopt(socket.SOL_SOCKET, socket.SO_KEEPALIVE, True)
+sock.ioctl(socket.SIO_KEEPALIVE_VALS, 
     (1,  # 开启保活机制
     60*1000,  # 1分钟后如果对方还没有反应，开始探测链接是否存在
     30 * 1000  # 60秒钟探测一次，默认10次，失败则断开
