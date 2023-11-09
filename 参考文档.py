@@ -90,3 +90,12 @@ def __await__(self):
 2、使用协程的Future对象，如future = loop.create_future(); await future
 3、使用IO多路复用中的select,如select.select([sock], [], [], timeout=timout), 其中的sock可以使用sock.send(b"\0x00")唤醒，或者在一定时间内未发生事件则继续往下执行。
 """
+
+事件监听有两种方式：
+1、while循环监听事件是否发生
+2、通过中断来判断事件是否发生目前主要有threading中Event、Condition或者socket通过网卡实现硬中断，即向对应的socket发送一个字节的数据即可
+另外如果需要本地实现事件通知，在linux环境下使用socket.socketpair()来实现，windows环境只能通过模拟的方式来实现事件通知
+对于CS和BS架构的系统，他们先是通过本地的操作系统监听用户的行为，然后通过socket链接将对应的数据发送给服务端，然后服务端响应对应的数据
+另外，也可以通过os.pipe()函数来实现管道，并设置管道的参数为非阻塞即可做到，可以使用这样的方式唤醒select.select或者select.poll的事件监听循环，从而执行一些其他的任务，比如心跳检测，一部任务等等
+对于异步事件循环本质上也是通过select及socket来实现的，另外异步事件中的锁都是通过futures.Future来暂停，并通过future.set_result来唤醒实现的，异步事件循环中的await、async的起点也是从future开始的。。。
+不管是asyncio_timeout还是其它的超时处理都是使用loop.call_later放入到调度循环中，并且将协程设置result或者设置为cancell
