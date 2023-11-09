@@ -23,12 +23,12 @@ while True:
   try:
     events = poller.poll()
     for fd，flags in events:
-    print("receive Signal")
-    print fd，flags
-    # read a single event
-    #os.read(fd,n),Read at most n bytes from file descriptor fd.
-    #Return a string containing the bytes read.
-    #If the end of the file referred to by fd has been reached, an empty string is returned
-    print os.read(pipe_r，1)
+      print("receive Signal")
+      print fd，flags
+      # read a single event
+      #os.read(fd,n),Read at most n bytes from file descriptor fd.
+      #Return a string containing the bytes read.
+      #If the end of the file referred to by fd has been reached, an empty string is returned
+      print os.read(pipe_r，1)
   except IOError:
     pass
