@@ -6,6 +6,7 @@ from redis import StrictRedis
 # 参考文档：
 # 1、https://www.cnblogs.com/fu-yong/p/9628965.html
 # 2、https://zhuanlan.zhihu.com/p/103963089
+# 该方案存在的问题：因为redis是惰性删除的，所以时间有可能会有一定的滞后，需要根据具体的业务场景来决定是否使用该方案
 redis = StrictRedis.from_url("redis://:Abc123456!@192.168.61.80:6379/10")
 
 class RedisEventListener(object):
