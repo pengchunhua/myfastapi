@@ -38,6 +38,8 @@ kafka架构和源码：
   4、kafka数据持久化机制：https://www.jianshu.com/p/1bdc181a7ebd
   5、kafka的ACK机制：https://juejin.cn/post/7166529283291086879
   6、kafka消费者轮询的准备工作：https://blog.csdn.net/baidu_40468340/article/details/128492534
+  7、kafka消费者的消费线程模型：https://zhuanlan.zhihu.com/p/666179914
+  8、kafka生产者端线程模型：https://blog.csdn.net/li1669852599/article/details/113694403
 
 Linux性能调优：
   1、https://zhuanlan.zhihu.com/p/470749806
