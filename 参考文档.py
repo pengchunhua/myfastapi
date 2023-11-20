@@ -1,36 +1,78 @@
 """
-python实现定时器：https://blog.csdn.net/qq_38412868/article/details/100711702
-python描述器：https://zhuanlan.zhihu.com/p/52708890
-python元类和元类编程：https://zhuanlan.zhihu.com/p/114242597
-property实现原理及实现：https://zhuanlan.zhihu.com/p/142029367
-python sendfile:https://pythonjishu.com/python-os-4/
-netty能做什么：https://www.zhihu.com/question/24322387
-Java NIO wakeup实现原理：https://www.cnblogs.com/yungyu16/p/13065194.html
-python实现异步的底层原理是什么：https://www.zhihu.com/question/432814091
-python实现简单事件循环：https://zhuanlan.zhihu.com/p/71511434
-python调用k8s API:https://www.cnblogs.com/linu/p/11703438.html
-python通过k8s API实现集群认证：https://blog.csdn.net/anqixiang/article/details/114434578
-python zookeeper实现服务注册与发现：https://blog.csdn.net/weixin_43866211/article/details/103028284
+python使用文档：
+  1、python实现定时器：https://blog.csdn.net/qq_38412868/article/details/100711702
+  2、python描述器：https://zhuanlan.zhihu.com/p/52708890
+  3、python元类和元类编程：https://zhuanlan.zhihu.com/p/114242597
+  4、property实现原理及实现：https://zhuanlan.zhihu.com/p/142029367
+  5、python sendfile和mmap(都是为了减少数据在内核空间与用户空间的拷贝，加速系统流程):
+    1) os.sendfile实现不同fd之间的数据拷贝：https://pythonjishu.com/python-os-4/
+    2) mmap实现进程间通信：https://blog.csdn.net/m0_37422289/article/details/79895526
+  6、python实现异步的底层原理是什么：https://www.zhihu.com/question/432814091
+  7、python实现简单事件循环：https://zhuanlan.zhihu.com/p/71511434
+  8、python signal.set_wakeup_fd的作用和实现：http://timd.cn/python/signal/
+  9、python signal的使用方式：https://zhuanlan.zhihu.com/p/91678827
+  10、tornado使用signal.set_wakeup_fd的代码：
+    1）、https://github.com/tao12345666333/tornado-zh/blob/master/tornado/platform/common.py#L10
+    2）、https://github.com/tao12345666333/tornado-zh/blob/master/tornado/ioloop.py
+  11、python的信号处理库（事件通知库）：
+    1）、https://zhuanlan.zhihu.com/p/435076618
+    2）、https://github.com/pallets-eco/blinker/tree/main/src/blinker
+  12、linux内核阻塞和异步机制原理：
+    1）、https://zhuanlan.zhihu.com/p/461439093
+    2）、https://blog.csdn.net/m0_46535940/article/details/124664708
+  13、python socket:
+    1、https://blog.csdn.net/wowocpp/article/details/115902450
+    2、python实现IO多路服用：
+      1) https://blog.csdn.net/god_yutaixin/article/details/102791197
+      2) https://zhuanlan.zhihu.com/p/367591714
+      3) https://www.cnblogs.com/huchong/p/8613308.html
+      4) https://blog.csdn.net/xiaomage0511/article/details/122104873
+  14、python防死锁方案：
+    1） https://python3-cookbook.readthedocs.io/zh-cn/latest/c12/p05_locking_with_deadlock_avoidance.html
+  15、python使用pika操作rabbitMQ:
+    1) https://www.rabbitmq.com/tutorials/tutorial-one-python.html
+  16、python文件锁问题：
+    1）https://www.cnblogs.com/itpython/p/10575462.html
+    2) fcntl实现进程间的文件锁：https://blog.csdn.net/weixin_45459224/article/details/107669580
+  17、python监听鼠标和键盘事件：
+    1）、keybord插件监听键盘事件：https://blog.csdn.net/coco56/article/details/107847467
+    2）、pynput监听鼠标和键盘事件：https://blog.csdn.net/u011367482/article/details/106173994
+  18、事件驱动：
+    1）、详解事件驱动event实现：https://blog.csdn.net/brucewong0516/article/details/84031715
+  19、SSE服务：
+    1、python中实现websocket和SSE实现HTTP:https://blog.csdn.net/weixin_44777680/article/details/114692497
+  20、threading中Local类的使用：
+    1、threading中Local类的使用：https://blog.csdn.net/brucewong0516/article/details/84589806?spm=1001.2014.3001.5502
+  21、asyncio事件循环：
+    1）、多线程中启用多个事件循环：https://www.jianshu.com/p/29ffdbd65679
+    2）、从0到精通事件循环：https://juejin.cn/post/7240427838343577655
+
+java中的参考文档：
+  netty能做什么：https://www.zhihu.com/question/24322387
+  Java NIO wakeup实现原理：https://www.cnblogs.com/yungyu16/p/13065194.html
+  JAVA线程池的7个参数：https://blog.csdn.net/ye17186/article/details/89467919
+
 zookeeper实现分布式锁：
   1、https://www.cnblogs.com/zhaobin022/p/8065317.html
   2、https://zhuanlan.zhihu.com/p/363323742
   3、https://www.cnblogs.com/zhaobin022/p/8065317.html
-mysql锁机制问题：https://zhuanlan.zhihu.com/p/48269420
-python signal.set_wakeup_fd的作用和实现：http://timd.cn/python/signal/
-tornado使用signal.set_wakeup_fd的代码：
-  1、https://github.com/tao12345666333/tornado-zh/blob/master/tornado/platform/common.py#L10
-  2、https://github.com/tao12345666333/tornado-zh/blob/master/tornado/ioloop.py
-python signal的使用方式：https://zhuanlan.zhihu.com/p/91678827
-python的信号处理库（事件通知库）：
-  1、https://zhuanlan.zhihu.com/p/435076618
-  2、https://github.com/pallets-eco/blinker/tree/main/src/blinker
-linux内核阻塞和异步机制原理：
-  1、https://zhuanlan.zhihu.com/p/461439093
-  2、https://blog.csdn.net/m0_46535940/article/details/124664708
+  4、zookeeper入门：https://zhuanlan.zhihu.com/p/98852358
+  5、zookeeper架构：https://zhuanlan.zhihu.com/p/108765831
+  6、zookeeper服务注册和发现：https://blog.csdn.net/weixin_43866211/article/details/103028284
+  7、zookeeper实现分布式锁：
+    1） https://www.cnblogs.com/zhaobin022/p/8065317.html
+    2） https://zhuanlan.zhihu.com/p/363323742
+    3）https://zhuanlan.zhihu.com/p/639756647
+  8、zookeeper实现分布式锁：https://zhuanlan.zhihu.com/p/639756647
 
 redis键空间通知：
-  1、https://zhuanlan.zhihu.com/p/103963089
-  2、https://www.cnblogs.com/fu-yong/p/9628965.html
+  1、键空间通知原理：https://zhuanlan.zhihu.com/p/103963089
+  2、键空间通知实现：https://www.cnblogs.com/fu-yong/p/9628965.html
+  3、redis常用面试题：https://zhuanlan.zhihu.com/p/276371544
+  4、redis的pipeline及transaction:https://www.cnblogs.com/kangoroo/p/7647052.html
+  5、redis使用lua脚本：
+    1） https://zhuanlan.zhihu.com/p/258890196
+    2） https://www.jianshu.com/p/79fb94c4a3a7
 
 kafka架构和源码：
   1、从源码到架构全部讲透：https://zhuanlan.zhihu.com/p/388355017
@@ -41,37 +83,75 @@ kafka架构和源码：
   6、kafka消费者轮询的准备工作：https://blog.csdn.net/baidu_40468340/article/details/128492534
   7、kafka消费者的消费线程模型：https://zhuanlan.zhihu.com/p/666179914
   8、kafka生产者端线程模型：https://blog.csdn.net/li1669852599/article/details/113694403
+  9、深入理解kafka架构：https://zhuanlan.zhihu.com/p/103249714
+  10、kafka的事务：https://juejin.cn/post/7122295644919693343
+
+RocketMQ：
+  1、图解RocketMQ核心：https://zhuanlan.zhihu.com/p/58892757
+
+rabbimq架构：
+  1、rabbitmq整体架构：https://zhuanlan.zhihu.com/p/279392399
+
+Nginx文档：
+  1、https://zhuanlan.zhihu.com/p/625184405
 
 Linux性能调优：
   1、https://zhuanlan.zhihu.com/p/470749806
-
-python监听鼠标和键盘事件：
-  1、keybord插件监听键盘事件：https://blog.csdn.net/coco56/article/details/107847467
-  2、pynput监听鼠标和键盘事件：https://blog.csdn.net/u011367482/article/details/106173994
-
-事件驱动：
-  1、详解事件驱动event实现：https://blog.csdn.net/brucewong0516/article/details/84031715
-
-SSE服务：
-  1、python中实现websocket和SSE实现HTTP:https://blog.csdn.net/weixin_44777680/article/details/114692497
-
-threading中Local类的使用：
-  1、threading中Local类的使用：https://blog.csdn.net/brucewong0516/article/details/84589806?spm=1001.2014.3001.5502
-
-asyncio事件循环：
-  1、多线程中启用多个事件循环：https://www.jianshu.com/p/29ffdbd65679
-  2、从0到精通事件循环：https://juejin.cn/post/7240427838343577655
+  2、https://blog.csdn.net/xfg0218/article/details/91536066
+  3、 https://blog.csdn.net/daocaokafei/article/details/114581983
+  4、linux cpu过高问题排查过程：https://blog.csdn.net/fenglibing/article/details/103164183
+  5、linux进程的概念：https://zhuanlan.zhihu.com/p/598910454
 
 xxl-job参考文档：
-  1、https://blog.csdn.net/qq_35946969/article/details/122567745
+  1、快慢线程池及负载均衡策略：https://blog.csdn.net/qq_35946969/article/details/122567745
   2、https://zhuanlan.zhihu.com/p/649370118
   3、https://juejin.cn/post/6976412313981026318
   4、https://blog.csdn.net/qq_38249409/article/details/127494577
   5、https://blog.csdn.net/Nuan_Feng/article/details/115619448
-  6、https://blog.csdn.net/Nuan_Feng/article/details/115619448
 
-rabbimq架构：
-  1、https://zhuanlan.zhihu.com/p/279392399
+容器及K8S：
+  1、容器镜像打包及迁移：https://blog.csdn.net/qq_14945437/article/details/106135369
+  2、k8s用户创建方法：https://www.cnblogs.com/zhaobowen/p/13562487.html
+  3、华为云k8s教程：https://support.huaweicloud.com/basics-cce/kubernetes_0010.html
+  4、k8s中的service教程：https://blog.csdn.net/Aimee_c/article/details/106964337和https://zhuanlan.zhihu.com/p/157565821
+  5、Linux隔离技术-CHROOT:https://zhuanlan.zhihu.com/p/435805234
+  6、Linux的NameSpace机制：https://zhuanlan.zhihu.com/p/73248894
+  7、Linux Cgroup机制：https://zhuanlan.zhihu.com/p/81668069
+  8、Helm教程：https://www.cnblogs.com/zhanglianghhh/p/14165995.html
+  9、imagepullSecrets生成及使用：https://blog.csdn.net/Michaelwubo/article/details/108054428
+  10、k8s整体架构：https://blog.csdn.net/qq_32476265/article/details/109430317
+  11、k8s资源监控：https://zhuanlan.zhihu.com/p/446357481
+  12、kubectl及k8s资源监控：https://zhuanlan.zhihu.com/p/561420211
+  13、python调用k8s API:https://www.cnblogs.com/linu/p/11703438.html
+  14、python通过k8s API实现集群认证：https://blog.csdn.net/anqixiang/article/details/114434578
+  
+mysql:
+  1、InnoDB中的3层B+树能存储多少数据：https://blog.csdn.net/qq_35590091/article/details/107361172
+  2、mysql join的底层实现原理：https://www.jianshu.com/p/16ad9669d8a9
+  3、mysql锁机制问题：https://zhuanlan.zhihu.com/p/48269420
+  4、mysql的两步提交：https://zhuanlan.zhihu.com/p/408175328
+  5、mysql高可用集群方案：https://zhuanlan.zhihu.com/p/102798762
+  6、mysql锁机制：https://zhuanlan.zhihu.com/p/48269420
+  
+iptables:
+  1、iptables四表五链的工作原理：https://zhuanlan.zhihu.com/p/347754874
+  2、iptables的SNAT/DNAT:https://zhuanlan.zhihu.com/p/429294272
+  3、iptables配置了ssh后仍然不能访问：https://www.zhihu.com/question/496138274
+
+Reactor模型：
+  1、Twisted基础教程：https://zhuanlan.zhihu.com/p/84036822
+
+PIP源的修改方式：
+  1、修改pip默认源：https://zhuanlan.zhihu.com/p/433878383
+
+APT源的修改方式：
+  源资料：https://blog.csdn.net/?url=https%3A%2F%2Fblog.csdn.net%2Fc417469898%2Farticle%2Fdetails%2F106412687
+  1、修改/etc/apt/source.list之后apt update
+
+elasticsearch资料：
+  1、ES官网：https://www.elastic.co/guide/cn/elasticsearch/guide/current/combining-filters.html
+  2、
+  
 
 asyncio时间循环的执行过程：
 1、通过asyncio创建并初始化loop
