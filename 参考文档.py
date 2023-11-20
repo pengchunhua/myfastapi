@@ -104,10 +104,12 @@ Linux性能调优：
 
 xxl-job参考文档：
   1、快慢线程池及负载均衡策略：https://blog.csdn.net/qq_35946969/article/details/122567745
-  2、https://zhuanlan.zhihu.com/p/649370118
-  3、https://juejin.cn/post/6976412313981026318
-  4、https://blog.csdn.net/qq_38249409/article/details/127494577
-  5、https://blog.csdn.net/Nuan_Feng/article/details/115619448
+  2、分布式任务调度框架：https://zhuanlan.zhihu.com/p/649370118
+  3、xxl-job调度中心原理：https://juejin.cn/post/6976412313981026318
+  4、XXL-JOB的任务调度执行流程及实现原理：https://blog.csdn.net/qq_38249409/article/details/127494577
+  5、xxl-job源码解析类图及架构图：https://blog.csdn.net/Nuan_Feng/article/details/115619448
+  6、xxl-job执行器原理：https://juejin.cn/post/6974174691162325028
+  说明：在xxl-job中其实executor有两种模式GLUE和执行器模式，其中执行器模式在启动的时候会自动注册到调度中心，后续就可以使用rpc的方式执行并获取执行结果
 
 容器及K8S：
   1、容器镜像打包及迁移：https://blog.csdn.net/qq_14945437/article/details/106135369
