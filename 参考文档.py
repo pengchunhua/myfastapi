@@ -33,7 +33,7 @@ python使用文档：
     1) https://www.rabbitmq.com/tutorials/tutorial-one-python.html
   16、python文件锁问题：
     1）https://www.cnblogs.com/itpython/p/10575462.html
-    2) fcntl实现进程间的文件锁：https://blog.csdn.net/weixin_45459224/article/details/107669580
+    2) fcntl实现进程间的文件锁：https://blog.csdn.net/weixin_45459224/article/details/107669580 和 https://www.cnblogs.com/my_life/articles/7602981.html
   17、python监听鼠标和键盘事件：
     1）、keybord插件监听键盘事件：https://blog.csdn.net/coco56/article/details/107847467
     2）、pynput监听鼠标和键盘事件：https://blog.csdn.net/u011367482/article/details/106173994
