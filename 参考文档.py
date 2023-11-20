@@ -3,6 +3,7 @@ python实现定时器：https://blog.csdn.net/qq_38412868/article/details/100711
 python描述器：https://zhuanlan.zhihu.com/p/52708890
 python元类和元类编程：https://zhuanlan.zhihu.com/p/114242597
 property实现原理及实现：https://zhuanlan.zhihu.com/p/142029367
+python sendfile:https://pythonjishu.com/python-os-4/
 netty能做什么：https://www.zhihu.com/question/24322387
 Java NIO wakeup实现原理：https://www.cnblogs.com/yungyu16/p/13065194.html
 python实现异步的底层原理是什么：https://www.zhihu.com/question/432814091
@@ -60,6 +61,17 @@ threading中Local类的使用：
 asyncio事件循环：
   1、多线程中启用多个事件循环：https://www.jianshu.com/p/29ffdbd65679
   2、从0到精通事件循环：https://juejin.cn/post/7240427838343577655
+
+xxl-job参考文档：
+  1、https://blog.csdn.net/qq_35946969/article/details/122567745
+  2、https://zhuanlan.zhihu.com/p/649370118
+  3、https://juejin.cn/post/6976412313981026318
+  4、https://blog.csdn.net/qq_38249409/article/details/127494577
+  5、https://blog.csdn.net/Nuan_Feng/article/details/115619448
+  6、https://blog.csdn.net/Nuan_Feng/article/details/115619448
+
+rabbimq架构：
+  1、https://zhuanlan.zhihu.com/p/279392399
 
 asyncio时间循环的执行过程：
 1、通过asyncio创建并初始化loop
