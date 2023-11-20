@@ -153,6 +153,12 @@ APT源的修改方式：
 elasticsearch资料：
   1、ES官网：https://www.elastic.co/guide/cn/elasticsearch/guide/current/combining-filters.html
   2、
+
+WSL安装和使用方式：
+  1、windows安装WSL:https://blog.csdn.net/weixin_44904239/article/details/130820174
+  2、WSL WslRegisterDistribution failed错误处理：https://wenmayi.com/post/3231.html
+  3、WSL安装过程：http://home.ustc.edu.cn/~ziheng/article/04/
+  4、vscode链接WSL:https://www.cnblogs.com/wxdblog/p/17234342.html
   
 
 asyncio时间循环的执行过程：
