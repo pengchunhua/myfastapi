@@ -44,7 +44,9 @@ python使用文档：
   20、threading中Local类的使用：
     1、threading中Local类的使用：https://blog.csdn.net/brucewong0516/article/details/84589806?spm=1001.2014.3001.5502
   21、asyncio事件循环：
-    1）、多线程中启用多个事件循环：https://www.jianshu.com/p/29ffdbd65679
+    1）、多线程中启用多个事件循环：
+        https://www.jianshu.com/p/29ffdbd65679
+        https://www.zhihu.com/question/585648216
     2）、从0到精通事件循环：https://juejin.cn/post/7240427838343577655
   22、python实现RPC框架：https://www.cnblogs.com/wanghuizhao/p/17237670.html
   23、asyncio中的procotol和transport:https://www.jianshu.com/p/e4020e4ea0ba
