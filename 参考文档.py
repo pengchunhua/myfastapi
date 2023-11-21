@@ -48,6 +48,11 @@ python使用文档：
     2）、从0到精通事件循环：https://juejin.cn/post/7240427838343577655
   22、python实现RPC框架：https://www.cnblogs.com/wanghuizhao/p/17237670.html
   23、asyncio中的procotol和transport:https://www.jianshu.com/p/e4020e4ea0ba
+  24、十六进制与字符串相互转化：https://blog.csdn.net/destiny1507/article/details/100185331
+  25、bytearray的转化与解码：
+    c = binascii.hexlify(b"hello world")
+    d = binascii.unhexlify(c)
+    d.encode()
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
