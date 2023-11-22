@@ -56,6 +56,7 @@ python使用文档：
     d = binascii.unhexlify(c)
     d.encode()
   26、动态配置读取方式：https://zhuanlan.zhihu.com/p/54764686
+  注意：所有的远端监听都是通过socket长连接，之后通过本地的queue来实现通知
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
