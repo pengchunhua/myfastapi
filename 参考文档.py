@@ -55,6 +55,7 @@ python使用文档：
     c = binascii.hexlify(b"hello world")
     d = binascii.unhexlify(c)
     d.encode()
+  26、动态配置读取方式：https://zhuanlan.zhihu.com/p/54764686
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
