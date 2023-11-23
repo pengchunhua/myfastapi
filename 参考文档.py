@@ -27,6 +27,9 @@ python使用文档：
       2) https://zhuanlan.zhihu.com/p/367591714
       3) https://www.cnblogs.com/huchong/p/8613308.html
       4) https://blog.csdn.net/xiaomage0511/article/details/122104873
+    3、socket连接数(数据是如何分发给对应的函数)：
+      1）https://zhuanlan.zhihu.com/p/290651392
+      2）https://www.cnblogs.com/sparkleDai/p/7604876.html
   14、python防死锁方案：
     1） https://python3-cookbook.readthedocs.io/zh-cn/latest/c12/p05_locking_with_deadlock_avoidance.html
   15、python使用pika操作rabbitMQ:
