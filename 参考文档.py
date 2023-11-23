@@ -150,6 +150,7 @@ mysql:
   4、mysql的两步提交：https://zhuanlan.zhihu.com/p/408175328
   5、mysql高可用集群方案：https://zhuanlan.zhihu.com/p/102798762
   6、mysql锁机制：https://zhuanlan.zhihu.com/p/48269420
+  7、mysql配置详细解释：https://developer.aliyun.com/article/822935
   
 iptables:
   1、iptables四表五链的工作原理：https://zhuanlan.zhihu.com/p/347754874
