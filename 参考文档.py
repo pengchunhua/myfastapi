@@ -116,6 +116,7 @@ Linux性能调优：
   3、 https://blog.csdn.net/daocaokafei/article/details/114581983
   4、linux cpu过高问题排查过程：https://blog.csdn.net/fenglibing/article/details/103164183
   5、linux进程的概念：https://zhuanlan.zhihu.com/p/598910454
+  6、linux中的cache和buffer:https://zhuanlan.zhihu.com/p/101258495
 
 xxl-job参考文档：
   1、快慢线程池及负载均衡策略：https://blog.csdn.net/qq_35946969/article/details/122567745
