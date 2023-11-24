@@ -8,12 +8,10 @@ def get_event_loop():
         _event_loop = Eventloop()
     return _event_loop
 
-
 def _complete_eventloop(fut):
     fut._loop.stop()
 
 class Eventloop:
-
     def __init__(self):
         self._ready = collections.deque()
         self._scheduled = []
@@ -67,13 +65,10 @@ class Eventloop:
 
 
 # asyio/handles.py
-
 class Handle():
     .......
 
-
 class TimeHandle(Handle):
-
     def __init__(self, when, callback, loop, *args):
         super().__init__(callback, loop, *args)
         self._when = when
@@ -103,8 +98,8 @@ class TimeHandle(Handle):
     def __ne__(self, other):
         return not self.__eq__(other)
 
-class DelayHandle(Handle):
 
+class DelayHandle(Handle):
     def __init__(self, delay, callback, loop, *args):
         super().__init__(callback, loop, *args)
         self._delay = delay
@@ -173,6 +168,7 @@ class Task(Future):
                 self._loop.call_soon(self._step, RuntimeError('你产生了一个不合规范的值'))
 
 # asyio/futures.py
+# 将
 def set_future_result(fut, result):
     fut.set_result(result)
   
