@@ -221,5 +221,8 @@ def __await__(self):
 
 注意：对于使用协程实现socket异步，服务端是可以不需要调整，只需要将客户端使用协程连接并使用reader及writer来读取或者发送对应的指令及数据，这样就完成了整个链路数据处理。具体可以参照aioredis的实现。
 异步网络io的接收到数据通知入口：asyncio/subprocess.py/SubprocessStreamProtocol/pip_data_receiveved或pipe_connection_lost函数作为入口通知到等待网络返回的函数
+异步socket客户端的调用链：asyncio/streams.py/asyncio.open_connection -> streamreader/streamwriter/protocol(绑定reader数据读取信息)/transport(writer通过transport发送数据)
+-> asyncio.py/base_events.py/create_connection ->asyncio.py/base_events.py/_create_connection_transport -> asyncio/selector_event.py/_SelectorSocketTransport/_make_socket_transport 
+-> 调用socket中的send/sendto等函数或者
 """
 
