@@ -218,5 +218,7 @@ def __await__(self):
 另外，也可以通过os.pipe()函数来实现管道，并设置管道的参数为非阻塞即可做到，可以使用这样的方式唤醒select.select或者select.poll的事件监听循环，从而执行一些其他的任务，比如心跳检测，一部任务等等
 对于异步事件循环本质上也是通过select及socket来实现的，另外异步事件中的锁都是通过futures.Future来暂停，并通过future.set_result来唤醒实现的，异步事件循环中的await、async的起点也是从future开始的。。。
 不管是asyncio_timeout还是其它的超时处理都是使用loop.call_later放入到调度循环中，并且将协程设置result或者设置为cancell
+
+注意：对于使用协程实现socket异步，服务端是可以不需要调整，只需要将客户端使用协程连接并使用reader及writer来读取或者发送对应的指令及数据，这样就完成了整个链路数据处理。具体可以参照aioredis的实现。
 """
 
