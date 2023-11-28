@@ -17,5 +17,6 @@ def kk(loop):
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
+    # 对应的还有call_soon/call_later/call_at/call_soon_threadsafe
     loop.call_later(10, kk, loop)  # 将对应的task任务封装成Handle、TimerHandle，之后调度器使用hanle中的run方法调用执行对应的任务
     loop.run_forever()
