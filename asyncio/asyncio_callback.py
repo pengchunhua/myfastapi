@@ -1,3 +1,5 @@
+# 说明：loop的call_later/call_soon/call_at等函数只能调用非协程函数，所以需要将任务封装成task后调用
+
 import asyncio
 
 async def print_hello():
@@ -8,6 +10,7 @@ async def print_hello():
 
 
 def complete(loop, future):
+    # 这里的future参数只能放在最后，其它参数使用partial来封装
     print(f"result: {future.result()}")
     loop.stop()
 
