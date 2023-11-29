@@ -225,4 +225,7 @@ def __await__(self):
 异步socket客户端的调用链：asyncio/streams.py/asyncio.open_connection -> streamreader/streamwriter/protocol(绑定reader数据读取信息，并且绑定transport)/transport(writer通过transport发送数据)
 -> asyncio.py/base_events.py/create_connection ->asyncio.py/base_events.py/_create_connection_transport -> asyncio/selector_event.py/_SelectorSocketTransport/_make_socket_transport 
 -> 调用socket中的连接对应的网口并调用send/sendto等函数
+
+线程池中的线程复用是在线程结束后向queue队列中发送None,直到有值后重新运行。另外线程的任务被封装为_WorkItem对象，获取到对象后直接使用work_item.run()方法即可
+客户端的连接池是将连接对象放到queue或者dict中，当需要时直接从queue或dict中直接获取到连接，然后进行处理，在服务端的连接池主要是用于accptor后对不同的连接处理即大家常用的reacotr模型。
 """
