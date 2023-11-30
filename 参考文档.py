@@ -66,6 +66,8 @@ python使用文档：
     1) https://stackoverflow.com/questions/71525132/how-to-write-a-custom-fastapi-middleware-class
     2) https://www.starlette.io/middleware/
     3) 查看starlette中的middleware源码：from starlette.middleware.base import BaseHTTPMiddleware
+  29、Fastapi中的Request生成过程：
+    fastapi/FastApi()中的router属性 -> APIRoute() -> routing.Route() -> request_response
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
