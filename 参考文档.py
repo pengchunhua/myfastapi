@@ -65,7 +65,7 @@ python使用文档：
   28、fastapi中间件实现方式：
     1) https://stackoverflow.com/questions/71525132/how-to-write-a-custom-fastapi-middleware-class
     2) https://www.starlette.io/middleware/
-
+    3) 查看starlette中的middleware源码：from starlette.middleware.base import BaseHTTPMiddleware
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
