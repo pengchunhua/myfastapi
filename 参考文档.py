@@ -67,7 +67,7 @@ python使用文档：
     2) https://www.starlette.io/middleware/
     3) 查看starlette中的middleware源码：from starlette.middleware.base import BaseHTTPMiddleware
   29、Fastapi中的Request生成过程：
-    fastapi/FastApi()中的router属性 -> fastapi/routing.py/APIRouter()中的route_class -> fastapi/routing.py/APIRoute() -> starlette/routing.py/routing.Route() -> request_response -> Scope/Receive/Send
+    fastapi/FastApi()中的router属性 -> fastapi/routing.py/APIRouter()中的route_class -> fastapi/routing.py/APIRoute() -> starlette/routing.py/routing.Route()中的app属性 -> request_response -> Scope/Receive/Send
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
