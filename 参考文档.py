@@ -62,6 +62,8 @@ python使用文档：
   26、动态配置读取方式：https://zhuanlan.zhihu.com/p/54764686
   注意：所有的远端监听都是通过socket长连接，之后通过本地的queue来实现通知
   27、邮件使用方法：https://blog.csdn.net/xiaolipanpan/article/details/112461566
+  28、fastapi中间件实现方式：https://stackoverflow.com/questions/71525132/how-to-write-a-custom-fastapi-middleware-class
+  29、
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
