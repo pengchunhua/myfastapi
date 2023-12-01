@@ -99,7 +99,7 @@ redis键空间通知：
   6、redis配置详解：https://www.cnblogs.com/nhdlb/p/14048083.html
   7、redis主从同步：https://zhuanlan.zhihu.com/p/55532249
 
-kafka架构和源码：
+kafka架构和源码(ISR(存活的副本，主要用于判断ack及主节点的重新选举)/LEO(partion中的最大偏移量，包含未提交的数据)/HW(已提交的数据最大偏移量))：
   1、从源码到架构全部讲透：https://zhuanlan.zhihu.com/p/388355017
   2、kafka设计架构详解：https://blog.csdn.net/qq_32828253/article/details/110732652
   3、kafka架构及网络设计原理：https://zhuanlan.zhihu.com/p/95502201
