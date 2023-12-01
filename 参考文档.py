@@ -109,6 +109,7 @@ kafka架构和源码：
   8、kafka生产者端线程模型：https://blog.csdn.net/li1669852599/article/details/113694403
   9、深入理解kafka架构：https://zhuanlan.zhihu.com/p/103249714
   10、kafka的事务：https://juejin.cn/post/7122295644919693343
+  11、kafka的副本同步机制：https://zhuanlan.zhihu.com/p/473892352
 
 RocketMQ：
   1、图解RocketMQ核心：https://zhuanlan.zhihu.com/p/58892757
