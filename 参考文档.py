@@ -76,16 +76,13 @@ java中的参考文档：
   JAVA线程池的7个参数：https://blog.csdn.net/ye17186/article/details/89467919
 
 zookeeper实现分布式锁：
-  1、https://www.cnblogs.com/zhaobin022/p/8065317.html
-  2、https://zhuanlan.zhihu.com/p/363323742
-  3、zookeeper入门：https://zhuanlan.zhihu.com/p/98852358
-  4、zookeeper架构：https://zhuanlan.zhihu.com/p/108765831
-  5、zookeeper服务注册和发现：https://blog.csdn.net/weixin_43866211/article/details/103028284
-  6、zookeeper实现分布式锁：
+  1、zookeeper入门：https://zhuanlan.zhihu.com/p/98852358
+  2、zookeeper架构：https://zhuanlan.zhihu.com/p/108765831
+  3、zookeeper服务注册和发现：https://blog.csdn.net/weixin_43866211/article/details/103028284
+  4、zookeeper实现分布式锁：
     1） https://www.cnblogs.com/zhaobin022/p/8065317.html
     2） https://zhuanlan.zhihu.com/p/363323742
     3）https://zhuanlan.zhihu.com/p/639756647
-  7、zookeeper实现分布式锁：https://zhuanlan.zhihu.com/p/639756647
 
 redis键空间通知：
   1、键空间通知原理：https://zhuanlan.zhihu.com/p/103963089
