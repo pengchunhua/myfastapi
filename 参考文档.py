@@ -97,6 +97,7 @@ redis键空间通知：
     1） https://zhuanlan.zhihu.com/p/258890196
     2） https://www.jianshu.com/p/79fb94c4a3a7
   6、redis配置详解：https://www.cnblogs.com/nhdlb/p/14048083.html
+  7、redis主从同步：https://zhuanlan.zhihu.com/p/55532249
 
 kafka架构和源码：
   1、从源码到架构全部讲透：https://zhuanlan.zhihu.com/p/388355017
