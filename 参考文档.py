@@ -162,6 +162,9 @@ mysql:
     1、https://juejin.cn/post/7143614079532269598
     2、https://juejin.cn/post/7145102393988874253
   9、覆盖索引：https://juejin.cn/post/6844903967365791752
+
+架构模式：
+  1、常用的10种架构模式：https://zhuanlan.zhihu.com/p/266696645
   
 iptables:
   1、iptables四表五链的工作原理：https://zhuanlan.zhihu.com/p/347754874
