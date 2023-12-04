@@ -165,6 +165,7 @@ mysql:
 
 架构模式：
   1、常用的10种架构模式：https://zhuanlan.zhihu.com/p/266696645
+  2、架构设计原则：https://zhuanlan.zhihu.com/p/81448795
   
 iptables:
   1、iptables四表五链的工作原理：https://zhuanlan.zhihu.com/p/347754874
