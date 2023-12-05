@@ -77,7 +77,7 @@ python使用文档：
     2、区别主要是cookies是由用户构建还是由代码直接带入（直接带入已访问的cookie信息则是session, session对象会记录已访问的状态信息，具体可以参考requests/sessions.py/Session对象中的send方法）
     3、认证方式参照：requests/auth.py中的几个类来实现
   32、SSLConnection使用方式（带https的安全认证方式）：
-    1、具体参照aioredis/connection.py/SSLConnection
+    1、具体参照aioredis/connection.py/SSLConnection及aioredis/connection.py/Connection中的_connect函数
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
