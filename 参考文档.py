@@ -69,6 +69,9 @@ python使用文档：
   29、Fastapi中的Request生成过程及调用链路：
     ASGI(规范) -> Scope/Receive/Send -> FastApi.__call__() -> starlette.__call__ -> starlette.build_middleware_stack(构建中间件链表) -> 调用接口并返回
     fastapi/FastApi()中的router属性 -> fastapi/routing.py/APIRouter()中的route_class -> fastapi/routing.py/APIRoute() -> starlette/routing.py/routing.Route()中的app属性 -> request_response -> Scope/Receive/Send
+  30、DNS相关概念：
+    1、https://www.cnblogs.com/bluestorm/p/10345334.html
+    2、python解析DNS:https://www.jianshu.com/p/c8b2175af465
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
