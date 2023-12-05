@@ -72,6 +72,7 @@ python使用文档：
   30、DNS相关概念：
     1、https://www.cnblogs.com/bluestorm/p/10345334.html(A记录，MX记录，CNAME记录，NS记录)
     2、python解析DNS:https://www.jianshu.com/p/c8b2175af465
+  31、session和requests请求的区别：https://blog.csdn.net/qq_25986923/article/details/105332640
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
