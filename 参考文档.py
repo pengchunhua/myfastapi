@@ -74,7 +74,7 @@ python使用文档：
     2、python解析DNS:https://www.jianshu.com/p/c8b2175af465
   31、session和requests请求的区别：
     1、https://blog.csdn.net/qq_25986923/article/details/105332640
-    2、区别主要是cookies是由用户构建还是由代码直接带入（直接带入已访问的cookie信息则是session）
+    2、区别主要是cookies是由用户构建还是由代码直接带入（直接带入已访问的cookie信息则是session, session对象会记录已访问的状态信息，具体可以参考requests/sessions.py/Session对象中的send方法）
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
