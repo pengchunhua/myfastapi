@@ -75,6 +75,7 @@ python使用文档：
   31、session和requests请求的区别：
     1、https://blog.csdn.net/qq_25986923/article/details/105332640
     2、区别主要是cookies是由用户构建还是由代码直接带入（直接带入已访问的cookie信息则是session, session对象会记录已访问的状态信息，具体可以参考requests/sessions.py/Session对象中的send方法）
+    3、认证方式参照：requests/auth.py中的几个类来实现
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
