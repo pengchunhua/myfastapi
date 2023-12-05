@@ -78,6 +78,8 @@ python使用文档：
     3、认证方式参照：requests/auth.py中的几个类来实现
   32、SSLConnection使用方式（带https的安全认证方式）：
     1、具体参照aioredis/connection.py/SSLConnection及aioredis/connection.py/Connection中的_connect函数
+  33、python操作ssh:
+    1、https://www.cnblogs.com/wongbingming/articles/12384764.html
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
