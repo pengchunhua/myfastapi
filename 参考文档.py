@@ -80,6 +80,9 @@ python使用文档：
     1、具体参照aioredis/connection.py/SSLConnection及aioredis/connection.py/Connection中的_connect函数
   33、python操作ssh:
     1、https://www.cnblogs.com/wongbingming/articles/12384764.html
+  34、python导出数据为excel:
+    1、用pandas直连数据库：https://blog.csdn.net/fly_duck/article/details/121561843
+    2、百万数据导出为excel:https://zhuanlan.zhihu.com/p/620220642
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
