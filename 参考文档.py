@@ -83,6 +83,9 @@ python使用文档：
   34、python导出数据为excel:
     1、用pandas直连数据库：https://blog.csdn.net/fly_duck/article/details/121561843
     2、百万数据导出为excel:https://zhuanlan.zhihu.com/p/620220642
+  35、python使用ast的文档（ast一般用于语法检查及python文件解析成语法树，是基于compile来处理的）：
+    1、https://blog.csdn.net/ThinkTimes/article/details/110831176
+    2、https://zhuanlan.zhihu.com/p/615456797
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
