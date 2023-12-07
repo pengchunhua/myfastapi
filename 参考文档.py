@@ -172,6 +172,7 @@ xxl-job参考文档：
   12、kubectl及k8s资源监控：https://zhuanlan.zhihu.com/p/561420211
   13、python调用k8s API:https://www.cnblogs.com/linu/p/11703438.html
   14、python通过k8s API实现集群认证：https://blog.csdn.net/anqixiang/article/details/114434578
+  15、jekins与k8s协同：https://juejin.cn/post/6963466680613896206
   
 mysql:
   1、InnoDB中的3层B+树能存储多少数据：https://blog.csdn.net/qq_35590091/article/details/107361172
