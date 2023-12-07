@@ -24,3 +24,22 @@ async def read_unicorn(name: str):
         raise UnicornException(name=name)
     return {"unicorn_name": name}
 
+# 校验异常统一处理入口
+@app.exception_handler(ValidationError)
+async def validation_exception_handler(request: Request, exc: ValidationError):
+    """处理模型校验错误"""
+    errors = []
+    for error in exc.errors():
+        err_msg = {"loc": list(error.get("loc")) if error.get("loc") else []}
+        err_msg["msg"] = error.get("msg")
+        err_msg["type"] = error.get("type")
+
+        if ctx := error.get("ctx"):
+            err_msg["ctx"] = json.loads(json.dumps(ctx, cls=DecEncoder))
+        errors.append(err_msg)
+
+    return JSONResponse(
+        status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+        content={"deatil": errors},
+    )
+
