@@ -31,6 +31,7 @@ python使用文档：
       1）https://zhuanlan.zhihu.com/p/290651392
       2）https://www.cnblogs.com/sparkleDai/p/7604876.html
       3）https://zhuanlan.zhihu.com/p/165554130
+    4、异步socket的实现方式：https://stackoverflow.com/questions/48506460/python-simple-socket-client-server-using-asyncio
   14、python防死锁方案：
     1） https://python3-cookbook.readthedocs.io/zh-cn/latest/c12/p05_locking_with_deadlock_avoidance.html
   15、python使用pika操作rabbitMQ:
