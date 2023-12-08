@@ -92,7 +92,8 @@ python使用文档：
   37、asyncio实现协程池：
     1、https://blog.csdn.net/weixin_43968923/article/details/111397237
     2、https://blog.csdn.net/weixin_45063926/article/details/130450167
-  38、python实现流媒体控制：
+  38、UA解析客户端信息：https://blog.csdn.net/lly1122334/article/details/108620963
+  39、python实现流媒体控制：
     1、https://blog.csdn.net/qq_47452807/article/details/124219048
     2、opencv操作摄像头：https://blog.csdn.net/qq_41122834/article/details/113824027
     3、音频和视频合并：https://blog.csdn.net/ayouleyang/article/details/104101049
