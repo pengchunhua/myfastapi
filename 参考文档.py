@@ -97,6 +97,7 @@ python使用文档：
     2、opencv操作摄像头：https://blog.csdn.net/qq_41122834/article/details/113824027
     3、音频和视频合并：https://blog.csdn.net/ayouleyang/article/details/104101049
     4、音频和视频合并方法：https://zhuanlan.zhihu.com/p/611271483
+    5、https://pythonjishu.com/ryleohbsydpjmlm/
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
