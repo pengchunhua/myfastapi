@@ -94,6 +94,7 @@ python使用文档：
     2、https://blog.csdn.net/weixin_45063926/article/details/130450167
   38、python实现流媒体控制：
     1、https://blog.csdn.net/qq_47452807/article/details/124219048
+    2、opencv操作摄像头：https://blog.csdn.net/qq_41122834/article/details/113824027
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
