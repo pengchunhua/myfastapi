@@ -162,6 +162,8 @@ rabbimq架构：
 Nginx文档：
   1、https://zhuanlan.zhihu.com/p/625184405
 
+poe在线人工智能：https://poe.com/
+
 Linux性能调优：
   1、https://zhuanlan.zhihu.com/p/470749806
   2、https://blog.csdn.net/xfg0218/article/details/91536066
