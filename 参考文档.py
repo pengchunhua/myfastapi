@@ -102,6 +102,17 @@ python使用文档：
   40、APSscheduler参考文档：
     1、https://www.cnblogs.com/leffss/p/11912364.html
     2、https://zhuanlan.zhihu.com/p/95563033
+  41、int、bytes和bytesarray之间互相转化：
+    a = 32780	
+    b = a.to_bytes(8, sys.byteorder)		# int --> bytes  第一个参数表示转化结果bytes的位数， 第二个参数表示 大端or小端
+    ba = bytearray(b)	# bytes --> bytearray
+    bal = list(ba)		# bytearray --> list
+    
+    ba_r = bytearray()
+    for i in range(8):
+        ba_r.append(bal[i])		# list --> bytearray
+    b_r = bytes(ba_r)		# bytearray --> bytes
+    a_r = int.from_bytes(ba_r, sys.byteorder)		# bytearray --> int
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
