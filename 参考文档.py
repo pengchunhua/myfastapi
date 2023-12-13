@@ -166,6 +166,8 @@ Nginx文档：
 
 poe在线人工智能：https://poe.com/
 
+pyqt安装方式：https://blog.csdn.net/weixin_45676151/article/details/119117035
+
 Linux性能调优：
   1、https://zhuanlan.zhihu.com/p/470749806
   2、https://blog.csdn.net/xfg0218/article/details/91536066
