@@ -1,4 +1,6 @@
-  def install_signal_handlers(self) -> None:
+"""具体可参照uvicorn中的run方法"""
+
+def install_signal_handlers(self) -> None:
       if threading.current_thread() is not threading.main_thread():
           # Signals can only be listened to from the main thread.
           return
