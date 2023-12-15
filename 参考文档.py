@@ -120,6 +120,7 @@ python使用文档：
   43、python文件下载：
     1、https://zhuanlan.zhihu.com/p/139027726
     2、https://cloud.tencent.com/developer/article/1471279
+    3、大文件计算md5：https://blog.csdn.net/ddw6022/article/details/88423423
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
