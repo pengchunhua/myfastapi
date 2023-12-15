@@ -117,6 +117,7 @@ python使用文档：
     1、基于redis的令牌桶限流：https://blog.csdn.net/u011519550/article/details/109246320
     2、基于redis的zset实现滑动窗口限流：https://pythonjishu.com/ftberbqixfcngcu/
     3、计数器、漏桶、令牌桶的三大限流策略：https://blog.csdn.net/crazymakercircle/article/details/130035504
+  43、python文件下载：https://zhuanlan.zhihu.com/p/139027726
 
 java中的参考文档：
   netty能做什么：https://www.zhihu.com/question/24322387
