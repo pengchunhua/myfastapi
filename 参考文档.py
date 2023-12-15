@@ -163,6 +163,8 @@ rabbimq架构：
 
 Nginx文档：
   1、https://zhuanlan.zhihu.com/p/625184405
+  2、nginx配置详解：https://zhuanlan.zhihu.com/p/88018924
+  3、nginx平滑升级及回滚：https://cloud.tencent.com/developer/article/1835556
 
 poe在线人工智能：https://poe.com/
 
