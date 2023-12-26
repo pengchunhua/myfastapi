@@ -175,6 +175,9 @@ Nginx文档：
   3、nginx平滑升级及回滚：https://cloud.tencent.com/developer/article/1835556
 
 poe在线人工智能：https://poe.com/
+一元机场：
+  1、机场订阅：https://xn--4gq62f52gdss.art/#/subscribe
+  2、机场下载地址：https://一元机场.com/down/clash.7z
 
 pyqt安装方式：https://blog.csdn.net/weixin_45676151/article/details/119117035
 
