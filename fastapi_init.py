@@ -1,7 +1,7 @@
 """
 1、创建项目目录：
 mkdir fastapi_demo && cd fastapi_demo && python -m venv venv
-2、新建config文件夹并创建config.py
+2、新建config/config.py
 内容如下：
 from pydantic import Field
 from pydantic_settings import BaseSettings
